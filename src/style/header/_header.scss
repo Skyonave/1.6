@@ -1,0 +1,25 @@
+.header {
+    background-color: $colorWhite;
+    height: 88px;
+    display: flex;
+    padding: 0 24px;
+    justify-content: space-between;
+    @media (min-width: 0px) and (max-width: 767px) { padding: 0 16px; }
+
+    .header__wrapper-divider {
+        height: 100%;
+        align-items: center;
+        display: flex;
+        gap: 16px;
+    }
+
+    .header__divider {
+        flex-shrink: 0;
+        width: 2px;
+        height: 32px;
+        background-color: $colorGrey;
+        border-radius: 1px;
+        margin: 0 4px;
+    }
+}
+

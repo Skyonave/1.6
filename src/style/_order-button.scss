@@ -1,0 +1,38 @@
+.order-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: $colorPink;
+    width: 119px;
+    height: 32px;
+    border-radius: 16px;
+    color: $colorWhite;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0 10px;
+    font-size: 14px;
+    
+    &::after {
+        position: absolute;
+        content: "";
+        height: 7px;
+        width: 7px;
+        border-top: 2px solid $colorWhite;
+        border-right: 2px solid $colorWhite;
+        transform: rotate(45deg);
+        top: 12px;
+        right: 16px;
+    }
+
+    &:hover {
+        background-color: $colorWhite;
+        color: $colorPink;
+        cursor: pointer;
+    }
+
+    &:hover::after {
+        border-top: 2px solid $colorPink;
+        border-right: 2px solid $colorPink;
+        cursor: pointer;
+    }
+}

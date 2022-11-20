@@ -1,0 +1,64 @@
+.repair-tech {
+    
+
+    &__wrapper {
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: space-between;
+       overflow: hidden;
+       height: 200px;
+       
+        @media (min-width: 768px) and (max-width: 992px) { padding: 24px 24px; }
+        @media (min-width: 993px) { padding: 24px 32px; }
+    }
+
+    &__list-item {
+        position: relative;
+        background-color: $colorWhite;
+        display: flex;
+        min-width: 240px;
+        height: 160px;
+        border-radius: 6px;
+        margin-bottom: 16px;
+        padding: 16px;
+    
+        @media (min-width: 768px) and (max-width: 992px) {
+            min-width: 224px;
+        }
+
+        .repair-tech__list-button {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid $colorPink;
+            transition: .3s;
+            transition-property: background-color, border-color;
+            bottom: 16px;
+            right: 16px;
+            
+      
+            &::after {
+              position: absolute;
+              content: "";
+              height: 9px;
+              width: 9px;
+              border-top: 2px solid $colorPink;
+              border-right: 2px solid $colorPink;
+              transform: rotate(45deg);
+              top: 13px;
+              left: 12px;
+            }
+      
+            &:hover {
+              background-color: $colorPink;
+            }
+      
+            &:hover::after {
+              border-top: 2px solid $colorWhite;
+              border-right: 2px solid $colorWhite;
+            }
+          }
+    }
+
+}

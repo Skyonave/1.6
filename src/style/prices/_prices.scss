@@ -1,0 +1,36 @@
+.prices {
+    padding: 16px 24px;
+    @media (min-width: 993px) { padding: 16px 32px; }
+    .prices__table {
+        width: 100%;
+        border-collapse: collapse;
+    
+        .prices__thead {
+            
+    
+            & th:not(.prices__separator) {
+                color: $colorFontGrey;
+                font-size: 14px;
+                font-weight: normal;
+                text-align: left;
+                padding: 16px 24px;
+                letter-spacing: -0.2px;
+            }
+            
+        }
+    
+        .prices__tbody {
+            background-color: $colorWhite;
+
+            & td:not(.prices__separator) {
+                position: relative;
+                font-size: 14px;
+                font-weight: normal;
+                text-align: left;
+                padding: 16px 24px;
+                letter-spacing: -0.2px;
+                border-bottom: 1px solid #EAEAEA;
+            }
+        }
+    }
+}

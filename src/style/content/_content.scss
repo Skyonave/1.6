@@ -1,0 +1,78 @@
+.content {
+  font-size: 14px;
+  padding-bottom: 40px;
+  .content__wrapper {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 768px) and (max-width: 992px) {
+      flex-direction: row;
+    }
+    @media (min-width: 993px) {
+      flex-direction: row;
+    }
+
+    .content__wrapper-block:nth-child(1) {
+      .content__text {
+        max-height: 90px;
+        overflow: hidden;
+        line-height: 20px;
+        padding: 0 20px;
+        letter-spacing: -0.2px;
+      }
+
+      @media (min-width: 0px) and (max-width: 767px) {
+        margin: 8px 16px;
+      }
+      @media (min-width: 768px) and (max-width: 992px) {
+        margin: 8px 24px;
+      }
+      @media (min-width: 993px) {
+        margin: 8px 34px;
+      }
+    }
+
+    .content__wrapper-block:nth-child(2) {
+      display: inherit;
+      flex-direction: column;
+
+      img {
+        @media (min-width: 768px) and (max-width: 992px) {
+          max-width: 360px;
+          border-radius: 5px;
+          margin-top: 25px;
+        }
+        @media (min-width: 993px) {
+          max-width: 530px;
+          border-radius: 5px;
+          margin-top: 25px;
+        }
+      }
+    }
+
+    .content__read-next {
+      margin: 10px 0;
+      position: relative;
+      font-size: 16px;
+      font-weight: 500;
+      padding: 4px 0 4px 30px;
+      transition: 0.3s;
+      transition-property: color;
+
+      &:hover {
+        color: $colorPink;
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        background-image: url("/src/img/icons/darrow.svg");
+        width: 8px;
+        height: 11px;
+        left: 13px;
+        top: 7px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+}

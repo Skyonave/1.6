@@ -1,0 +1,26 @@
+.show-button {
+    margin: 10px 0;
+    position: relative;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 4px 0 4px 24px;
+    transition: 0.3s;
+    transition-property: color;
+    align-self: flex-start;
+
+    &:hover {
+    color: $colorPink;
+    }
+
+    &::before {
+    position: absolute;
+    content: "";
+    background-image: url("/src/img/icons/darrow.svg");
+    width: 8px;
+    height: 11px;
+    left: 2px;
+    top: 7px;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+}

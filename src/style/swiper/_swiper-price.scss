@@ -1,0 +1,37 @@
+.swiper-price {
+    min-width: 320px;
+    max-width: 100vw;
+    height: 260px;
+
+    .swiper-price__swiper-slide {
+        padding: 0 8px;
+    }
+
+    .swiper-price__item-wrapper {
+        margin-top: 20px;
+        height: 200px;
+        width: 250px;
+        background-color: white;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .swiper-price__item-time-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .swiper-price__item-heading {
+        color: $colorFontGrey;
+        font-size: 14px;
+        line-height: 16px;
+    }
+    
+    & span {
+        font-size: 14px;
+        line-height: 18px;
+    }
+}

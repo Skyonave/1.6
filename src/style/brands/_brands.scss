@@ -1,0 +1,70 @@
+.brands {
+  display: flex;
+  flex-direction: column;
+
+  .brands__list-item {
+    display: flex;
+    width: 240px;
+    height: 72px;
+    background-color: white;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    border-radius: 6px;
+
+    @media (min-width: 768px) and (max-width: 992px) {
+      width: 224px;
+    }
+
+    .brands__list-item-button {
+      position: relative;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 2px solid $colorPink;
+      transition: .3s;
+      transition-property: background-color, border-color;
+      
+
+      &::after {
+        position: absolute;
+        content: "";
+        height: 9px;
+        width: 9px;
+        border-top: 2px solid $colorPink;
+        border-right: 2px solid $colorPink;
+        transform: rotate(45deg);
+        top: 13px;
+        left: 12px;
+      }
+
+      &:hover {
+        background-color: $colorPink;
+      }
+
+      &:hover::after {
+        border-top: 2px solid $colorWhite;
+        border-right: 2px solid $colorWhite;
+      }
+    }
+
+  }
+  
+  
+
+  .brands__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    height: 200px;
+    
+    @media (min-width: 768px) and (max-width: 992px) {
+      padding: 24px 24px;
+      gap: 16px 24px;
+    }
+    @media (min-width: 993px) { 
+      padding: 24px 32px;
+      gap: 16px 32px;
+    }
+  }
+}

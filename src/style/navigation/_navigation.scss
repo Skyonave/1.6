@@ -1,0 +1,42 @@
+.navigation {
+  .navigation__list {
+    display: flex;
+    gap: 3px;
+    @media (min-width: 0px) and (max-width: 767px) { overflow-x: scroll; padding: 8px 16px;}
+    @media (min-width: 768px) and (max-width: 992px) { overflow-x: scroll; padding: 8px 24px;}
+    @media (min-width: 993px) { flex-wrap: wrap; padding: 8px 34px;}    
+  }
+
+  .navigation__list-item {
+    display: flex;
+    height: 40px;
+    align-items: center;
+    padding: 0 18px;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    transition: .3s;
+    transition-property: color, border-color, background-color;
+
+    &:hover:not(.navigation__list-item--active) {
+      border: 2px solid $colorPinkOpacity;
+      background-color: $colorWhite;
+      border-radius: 6px;
+      color: $colorPink;
+    }
+  }
+
+  .navigation__list-item--active {
+    border: 2px solid $colorCyanLight;
+    background-color: $colorWhite;
+    border-radius: 6px;
+    color: $colorFontGrey;
+  }
+
+  .navigation__list-item-link {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+    line-height: 24px;
+    white-space: nowrap;
+  }
+}
